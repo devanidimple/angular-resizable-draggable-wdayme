@@ -1,0 +1,18 @@
+<p>Start editing to see some magic happen :)</p>
+
+<div class="bound-box" #myBounds>
+  <div
+    ngResizable
+    ngDraggable
+    [inBounds]="true"
+    [bounds]="myBounds"
+    rzContainment="parent"
+    rzHandles="all"
+    class="resizable-widget"
+    (mouseup)="newPosition($event)"
+  >
+    <h4 class="widget-header">Resizable</h4>
+  </div>
+</div>
+<label class="labels">Position</label>
+<label class="position">{{ position }}</label>
